@@ -2,58 +2,21 @@ theme = "catppuccin_frappe"
 # theme = "catppuccin_latte"
 
 [editor]
-auto-save = true
+line-number = "relative"
 soft-wrap.enable = true
-scrolloff = 0
-
-[editor.lsp]
-auto-signature-help = false
+auto-save = true
 
 [keys.normal]
-# COMMANDS
-C-q = ":write"
-A-q = [":write", ":run-shell-command cargo run"]
-p = "paste_before"
-P = "paste_after"
-"a" = "insert_mode"
-
-# select word under cursor, set search to selection, add new selection at next occurrence 
-"C-d" = ["move_prev_word_start", "move_next_word_end", "search_selection", "extend_search_next"]
-# move line up-down
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-
-# LSP
-A-s = ":lsp-stop"
-A-g = ":lsp-restart"
-
-[editor.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
-'<' = '>'
+C-q = ":write"
 
 [keys.insert]
-# COMMANDS
 C-q = ":write"
-A-q = [":write", ":run-shell-command cargo run"]
-
-# MOVE, SELECT, etc..
+A-a = "normal_mode"
+"C-c" = "toggle_comments"
 "C-right" = "move_next_word_start"
 "C-left" = "move_prev_word_start"
-"C-S-right" = "select_mode"
-"C-S-left" = "select_mode"
-"C-e" = "move_next_word_end"
-"C-t" = "find_till_char"
-"C-f" = "find_next_char"
-"C-a" = "goto_line_start"
+"A-d" = "delete_selection"
 "C-s" = "goto_first_nonwhitespace"
 "C-l" = "goto_line_end"
-"A-d" = "delete_selection"
-"C-c" = "toggle_comments"
-"C-u" = "undo"
-"C-U" = "redo"
-# select word under cursor, set search to selection, add new selection at next occurrence 
-"C-d" = ["move_prev_word_start", "move_next_word_end", "search_selection", "extend_search_next"]
