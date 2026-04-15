@@ -1,15 +1,19 @@
-theme = "catppuccin_frappe"
+theme = "catppuccin_macchiato"
 # theme = "catppuccin_latte"
+# theme = "catppuccin_frappe"
 
 [editor]
 line-number = "relative"
 soft-wrap.enable = true
 auto-save = true
+# bufferline = "multiple"
 
 [keys.normal]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-q = ":write"
+C-e = ":quit"
+C-r = ":config-reload"
 
 [keys.insert]
 C-q = ":write"
@@ -19,6 +23,8 @@ A-a = "normal_mode"
 
 "A-w" = "move_next_word_start"
 "A-b" = "move_prev_word_start"
+"C-right" = "move_next_word_start"
+"C-left" = "move_prev_word_start"
 
 "A-l" = "move_char_right"
 "A-h" = "move_char_left"
@@ -27,3 +33,5 @@ A-a = "normal_mode"
 
 "C-s" = "goto_first_nonwhitespace"
 "C-l" = "goto_line_end"
+
+C-r = ":config-reload"
